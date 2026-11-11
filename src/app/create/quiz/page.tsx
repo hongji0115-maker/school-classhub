@@ -131,7 +131,7 @@ export default function CreateQuizPage() {
         state: 'lobby',
       });
 
-      router.push(`/quiz/teacher/${pin}`);
+      router.push(`/quiz/teacher?pin=${pin}`);
     } catch {
       setErrorMsg('네트워크 통신 중 오류가 발생했습니다.');
       setCreating(false);

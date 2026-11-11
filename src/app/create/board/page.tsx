@@ -63,7 +63,7 @@ export default function CreateBoardPage() {
         return;
       }
 
-      router.push(`/board/${pin}`);
+      router.push(`/board?pin=${pin}`);
     } catch {
       setErrorMsg('네트워크 오류가 발생했습니다.');
       setCreating(false);

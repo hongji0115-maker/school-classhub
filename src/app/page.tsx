@@ -48,9 +48,9 @@ export default function Home() {
       }
 
       if (room.room_type === 'board') {
-        router.push(`/board/${cleanPin}`);
+        router.push(`/board?pin=${cleanPin}`);
       } else {
-        router.push(`/quiz/student/${cleanPin}`);
+        router.push(`/quiz/student?pin=${cleanPin}`);
       }
     } catch {
       setErrorMsg('방 입장 중 오류가 발생했습니다.');
@@ -186,7 +186,7 @@ export default function Home() {
 
               <div className="mt-5 pt-4 border-t border-slate-100">
                 <Link
-                  href="/board/111111"
+                  href="/board?pin=111111"
                   className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-amber-500 text-white text-sm font-bold hover:bg-amber-600 transition shadow-sm"
                 >
                   <PlayCircle className="w-4 h-4" />
@@ -219,14 +219,14 @@ export default function Home() {
 
               <div className="mt-5 pt-4 border-t border-slate-100 grid grid-cols-2 gap-2">
                 <Link
-                  href="/quiz/teacher/222222"
+                  href="/quiz/teacher?pin=222222"
                   className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-violet-600 text-white text-xs font-bold hover:bg-violet-700 transition shadow-sm"
                 >
                   <Users className="w-3.5 h-3.5" />
                   <span>선생님 전자칠판</span>
                 </Link>
                 <Link
-                  href="/quiz/student/222222"
+                  href="/quiz/student?pin=222222"
                   className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-slate-100 text-slate-700 text-xs font-bold hover:bg-slate-200 transition"
                 >
                   <span>학생 모바일 화면</span>
